@@ -1,19 +1,21 @@
 # Telas de PBI no Figma
 
-Fluxo para cada PBI (Azure DevOps):
-1. O usuário cola o texto da PBI e o link do frame de referência no Figma.
-2. Ler só o frame de referência (get_metadata + 1 screenshot).
-3. Clonar o frame aprovado e alterar/adicionar blocos seguindo o mesmo padrão
-   (fontes, barras de título, células label/valor). Não usar biblioteca: o padrão é o frame de referência.
-4. Criar as telas à direita das existentes, nomeadas "PBI <nº> · C<cenário> · <resumo>".
-5. Concentrar o trabalho em poucas chamadas: 1 leitura, 1 escrita e 1 screenshot final.
-6. Responder em português, de forma curta.
+Fluxo:
+1. Usuário manda texto da PBI (com nº) + link de onde criar as telas.
+2. Faltou algo (nº da PBI, web ou mobile, tela base, padrão visual)? Perguntar antes. Não chutar.
+3. Ler só a tela base (1 metadata + 1 screenshot). Clonar e ajustar; não montar do zero.
+4. Criar abaixo/à direita das existentes, com título "Product Backlog Item <nº>: [BO-e][AIA][...] <resumo>" (clonar o título anterior).
+5. Frames: "1 - Tipo de Pesquisa", "2 - Filtros X", "3 - Modal X"… (viram PNG para o time de requisitos).
+6. Poucas chamadas: 1 leitura, 1 escrita, 1 screenshot final. Responder em português, curto.
 
-Regras de conteúdo frequentes:
-- Campo sem informação → exibir "Não Informado" (textCase ORIGINAL, não em caixa alta).
-- Números de ocorrência com 5 dígitos (00001); datas no formato dd/MM/yyyy.
+Conteúdo:
+- Campo vazio → "Não Informado" (textCase original).
+- Ocorrência com 5 dígitos (00001); datas dd/MM/yyyy.
 
-## Projetos
-| Projeto | Arquivo Figma | Frame de referência |
-|---|---|---|
-| AIA / ROe (BO-e) | https://www.figma.com/design/jkCgsXdY2Us6q1uiI4QeOf/AIA-ROe--Pablo- | node 4167-19816 (PDF da ocorrência) |
+## BO-e / AIA (RO-e)
+Arquivo: https://www.figma.com/design/jkCgsXdY2Us6q1uiI4QeOf/AIA-ROe--Pablo- · página "📱Mobile Off-line"
+- Web 1440px. Base de tela: node 4079:18450 (Empenho: header, filtros em linha + Pesquisar, divisor, Resultados, cards).
+- Pesquisar Ocorrência: título "Ambiental - AIA Eletrônico"; card com Tipo de Pesquisa (largo) + CONFIRMAR; abaixo, filtros + Pesquisar + resultados. Exemplo: frames "1 - Tipo de Pesquisa" a "6 - …" da PBI de filtros Providências/Encerradas.
+- Modal: overlay escuro; card branco 700px; título Roboto Regular 22; campo "Pesquisar" com lupa; itens em cards com sombra e ícone check (selecionado verde #28A745); botões CANCELAR (#F44336) e CONFIRMAR (#28A745) dividindo a largura.
+- PDF da ocorrência: node 4167:19816.
+- Fields das instâncias têm largura fixa: detachInstance antes de usar FILL.
