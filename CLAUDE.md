@@ -4,7 +4,7 @@ Fluxo:
 1. Usuário manda texto da PBI (com nº) + link de onde criar as telas.
 2. Faltou algo (nº da PBI, web ou mobile, tela base, padrão visual)? Perguntar antes. Não chutar.
 3. Ler só a tela base (1 metadata + 1 screenshot). Clonar e ajustar; não montar do zero.
-4. Criar abaixo/à direita das existentes, com título "Product Backlog Item <nº>: [BO-e][AIA][...] <resumo>" (clonar o título anterior).
+4. Criar abaixo/à direita das existentes, com título "Product Backlog Item <nº>: [BO-e][AIA][...] <resumo>" (clonar o título anterior e trocar o hyperlink para .../_workitems/edit/<nº>).
 5. Frames: "1 - Tipo de Pesquisa", "2 - Filtros X", "3 - Modal X"… (viram PNG para o time de requisitos).
 6. Poucas chamadas: 1 leitura, 1 escrita, 1 screenshot final. Responder em português, curto.
 
